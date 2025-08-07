@@ -3,16 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:habitwise_app/main.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
+  testWidgets('HabitWiseApp can build', (WidgetTester tester) async {
+    await tester.pumpWidget(const HabitWiseApp());
 
-    expect(find.text('habitwise_app App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
-  });
-
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('habitwise_app'), findsOneWidget);
+    // Verify app does not crash on build and shows a MaterialApp.
+    expect(find.byType(MaterialApp), findsOneWidget);
   });
 }

@@ -1,10 +1,20 @@
 # habitwise_app
 
-A new Flutter project.
+HabitWise is a modern, minimalistic habit tracker Flutter app.  
+Features: user registration and authentication (Firebase), CRUD habits, goal setting (daily, weekly, custom), reminders/push notifications, charts/stats visualization, local and cloud sync, dark/light themes.
 
-## Getting Started
+**Design**  
+- Palette:  
+  - Primary: #4caf50  
+  - Secondary: #2196f3  
+  - Accent: #ffeb3b  
+- Layout: Main dashboard with tabbed navigation for Habits, Stats, and Settings.  
+- Minimalist habit cards, FAB, and analytics screens.  
+- App uses environment variables (.env) for secrets and config.
 
-This project is a starting point for a Flutter application.
+**Setup**
+- Copy `.env.example` to `.env` and insert your Firebase/web credentials before running the app.
+- See `/lib/` for core models, providers, services, and screens.
 
 A few resources to get you started if this is your first Flutter project:
 
